@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swing School</title>
+    <style>
+      body {
+        background-color: #191919;
+      }
+      h1 {
+        color: #ecdbba;
+        text-align: center;
+        font-family: fangsong;
+        font-size: 100px;
+        margin-top: 200px;
+        margin-bottom: 20px;
+      }
+      h3 {
+        text-align: center;
+        font-family: monospace;
+        color: #ecdbba;
+        font-weight: normal;
+        font-size: 28px;
+      }
+
+      p {
+        text-align: center;
+        font-family: monospace;
+        color: #ecdbba;
+        line-height: 1.5;
+        font-size: 17px;
+        margin: 20px;
+      }
+      a {
+        font-size: 18px;
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
+        color: #191919;
+        background-color: #c84b31;
+        border: 2px solid;
+        border-radius: 4px;
+        padding: 20px;
+        text-decoration: none;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        color: #c84b31;
+        margin-top: 20px;
+        background-color: #ecdbba;
+        font-size: 25px;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0px 2px 10px #020101;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 400px;
+        max-width: 100%;
+      }
+
+      button:hover {
+        background-color: #c84b31;
+        color: #ecdbba;
+        transition: 0.2sec;
+        cursor: pointer;
+      }
+
+      .lindy:hover {
+        transition: 0.3sec;
+        background-color: #e2563a;
+        cursor: pointer;
+      }
+      .charleston:hover {
+        transition: 0.3sec;
+        background-color: #e2563a;
+        cursor: pointer;
+      }
+      .container {
+        margin: 0 auto;
+        padding: 70px;
+        max-width: 800px;
+      }
+      .link-container {
+        display: inline-flex;
+        align-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: 100px;
+      }
+
+      .charleston {
+        margin-top: 50px;
+        color: #ecdbba;
+
+        margin-bottom: 100px;
+      }
+      .lindy {
+        margin-top: 50px;
+        color: #ecdbba;
+        margin-right: 50px;
+        margin-bottom: 100px;
+      }
+      #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <video autoplay muted loop id="background-video">
+      <source
+        src="Strictly Lindy FINAL- Sofia Swing Dance Festival 2021 -Toge (1).mp4"
+        type="video/mp4"
+      />
+    </video> -->
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/T1NnyYkmI_U?controls=0rel=0&amp;autoplay=1&mute=1"
+      frameborder="0"
+      allowfullscreen
+      id="background-video"
+    ></iframe>
+
+    <div class="container">
+      <h1>DO YOU WANNA DANCE?</h1>
+      <h3>
+        CHECK OUT OUR
+        <strong>LINDY HOP</strong> AND <strong>CHARLESTON</strong>
+        LESSONS.
+      </h3>
+
+      <div class="link-container">
+        <a
+          class="lindy"
+          href="https://en.wikipedia.org/wiki/Lindy_Hop"
+          target="_blank"
+          >What is Lindy hop?
+        </a>
+
+        <a
+          class="charleston"
+          href="https://en.wikipedia.org/wiki/Charleston_(dance)"
+          target="_blank"
+          >What is Charleston?
+        </a>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        alt="swing dance"
+        width="700px"
+        ;
+      />
+      <p>
+        We are a small swing dance school located in Croatia.
+        <br />
+        If you are a beginner or have already miles in your dancing shoes, we
+        would like you to join us on the dance floor.
+      </p>
+      <p>
+        We offer
+        <strong>lindy hop and solo charleston</strong>
+        lessons.
+      </p>
+      <br />
+      <button>Wanna join?</button>
+      <br />
+      <br />
+      <p>Coded by Eva Kalogjera</p>
+    </div>
+
+    <script>
+      function dancerInfo() {
+        let name = prompt("What is your name?");
+        let course = prompt("Are you interested in Lindy hop or Charleston?");
+        let level = prompt("Are you a beginner?");
+        let email = prompt(
+          "Please leave us your email address so we can get in touch with you."
+        );
+        course = course.toLowerCase();
+        course = course.trim();
+        level = level.toLowerCase();
+        level = level.trim();
+        if (course === "lindy hop" && level === "yes") {
+          alert(
+            "Thank you " +
+              name +
+              "! We will get back to you with all the information regarding the beginner lindy hop class. Don't forget, it don't mean a thing if it ain't got the swing "
+          );
+        } else if (course === "lindy hop" && level === "no") {
+          alert(
+            "Thank you " +
+              name +
+              "! We will get back to you with all the information regarding the intermediate lindy hop class. Don't forget, it don't mean a thing if it ain't got the swing."
+          );
+        } else if (course === "charleston" && level === "no") {
+          alert(
+            "Thank you " +
+              name +
+              "! We will get back to you with all the information regarding the intermediate Charleston class. Don't forget, it don't mean a thing if it ain't got the swing."
+          );
+        } else if (course === "charleston" && level === "yes") {
+          alert(
+            "Thank you " +
+              name +
+              "! We will get back to you with all the information regarding the beginner Charleston class. Don't forget, it don't mean a thing if it ain't got the swing,"
+          );
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", dancerInfo);
+    </script>
+  </body>
+</html>
